@@ -10,7 +10,7 @@ import pandas as pd;
 import matplotlib.pyplot as plt;
 
 #read data
-path = 'D:\\ML\\Regression_with_one_variable\\ex1data1.txt';
+path = 'D:\\ML\Regression_with_one_variable\\ML_Regression_with_one_variable\\ex1data1.txt';
 data = pd.read_csv(path,header=None,names=['Population','Profit'])
 
 #show data details
