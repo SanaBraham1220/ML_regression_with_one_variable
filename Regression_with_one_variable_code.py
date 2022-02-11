@@ -50,14 +50,17 @@ y = data.iloc[: , cols-1 : cols]
 X= np.matrix(X.values)
 Y= np.matrix(y.values)
 thetha = np.matrix(np.array([0,0]))
-print('******************************************************')
-print('X = \n',X)
-print('X.shape = \n',X.shape)
-print('thetha= \n',thetha)
-print('thetha.shape= \n',thetha.shape)
-print('y= \n',y)
-print('y.shape= \n',y.shape)
-print('******************************************************')
+
+
+# print("matrice=",X*X)
+# print('******************************************************')
+# print('X = \n',X)
+# print('X.shape = \n',X.shape)
+# print('thetha= \n',thetha)
+# print('thetha.shape= \n',thetha.shape)
+# print('y= \n',y)
+# print('y.shape= \n',y.shape)
+# print('******************************************************')
                                  
 #Cost Function
 def computeCost(X,y,thetha):
@@ -80,7 +83,6 @@ def gradientDescent(X,y,thetha,alpha,iters):
         for j in range(parameters):
             term = np.multiply(error, X[:,j])
             temp[0,j] = thetha[0,j] - ((alpha / len(X)) * np.sum(term))
-
             
         thetha =temp;
         cost[i] = computeCost(X,y,thetha)
